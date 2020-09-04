@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700');
+        #myVideo {
+     position: fixed;
+     right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.content{
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+     
+    top:-10px;
+    width:99%;
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+     
+}
+.top-right
+{
+    position: absolute;
+    max-width: 200px;
+    top: 14px;
+    right:10px;
+  font-size: 14px;
+  line-height: 1.6;
+
+}
+    </style>
+</head>
+
+<body bgcolor="white" font-color="red">
+ 
+<video autoplay muted loop id="myVideo">
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+<h1>Share your receipe to <b style=" font-family: 'Poppins',sans-serif;text-shadow: 2px 2px #4E1D07; ">FOODY</b></h1>
+
+<form>
+    <fieldset>
+        <legend> Your Details</legend>
+        <table width='500px'  >
+<tr>
+    <td align='center'>Name:</td>
+    <td><input type='text' name='name' id="name"></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+
+
+<tr>
+    <td align='center'>Dish Name:</td>
+    <td><input type='text' name='name1' id="dish"></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+
+ 
+<tr >
+    <td align='center'>Dish:</td>
+    <td>Veg:<input type='radio' name="gen1" value="gen1" id="veg">&nbsp&nbsp
+    NonVeg:<input type='radio' name="gen1" value="gen1" id="veg"></td>
+
+</tr>
+<tr> <td>&nbsp;</td> </tr> 
+<tr>
+    <td align='center'>Email:</td>
+    <td><input type='email' name='name212' id="email"></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr></table></fieldset></form>
+
+<fieldset>
+    <legend>Ingredients</legend>
+
+<table width="480px ">
+
+<tr>
+
+    <td align='center'>Indgredients info:</td>
+    <td><textarea  name='name22' cols="40" rows="5" id="info"></textarea></td></tr>
+     
+
+
+<tr> <td>&nbsp;</td> </tr>
+</table></fieldset></form>
+         
+
+    
+  <form> <fieldset>
+        <legend>Steps to make</legend> 
+
+<table>
+
+
+<tr>
+    <td align='center'>Steps info:</td>
+    <td><textarea  name='name22' cols="40" rows="5" id="step"></textarea></td></tr>
+<tr> <td>&nbsp;</td> </tr>
+
+
+
+<tr>
+    <td align='center'>Tips or Notes:</td>
+    <td><textarea  name='name22' cols="40" rows="5" id="tip" ></textarea></td></tr>
+<tr> <td>&nbsp;</td> </tr>
+
+
+
+</table>
+<input type="submit" name="subit2" value="Submit" onclick="send()" value="submit">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="Reset" name="subit1" value="Reset">
+ 
+
+</fieldset></form>
+
+</div>
+
+<script >
+  function send()
+  {
+    var a= document.getElementById('name').value;
+    var b=document.getElementById('dish').value;
+    var c=document.getElementById('email').value;
+    var d=document.getElementById('info').value;
+    var submit =true;
+
+    if(a=="" || b=="" || c=="" || d=="" || e==""){
+        alert("You should enter all your values");
+    }
+
+   
+    else{
+        alert('Your recipe is submit to FOODY');
+    }
+  }  
+
+
+</script>
+</body>
+</html>

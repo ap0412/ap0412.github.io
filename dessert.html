@@ -1,0 +1,267 @@
+
+<html><head>
+
+<meta charset="utf-8">
+  <title>key</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="swiper.min.css">
+  
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: black;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .bottom-left {
+  position: absolute;
+  bottom: 59px;
+  left: 136px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: -20px;
+  left: 86px;
+}
+
+ .title {
+      font-size: 75px;
+      font-weight: 200;
+    }
+
+    .subtitle {
+      font-size: 21px;
+    }
+
+    .text {
+      font-size: 24px;
+      max-width: 440px;
+      line-height: 1.6;
+    }
+    header{
+   width: 100vw; height: 10vh;
+   background-color: black ;
+   display: flex;
+   align-items: center;
+   position: fixed;
+   transition: all 0.3s;
+}
+a {
+ display: inline-block;
+   margin: 10px 0 0;
+   padding: 10px 10px;
+   text-decoration: none;
+   border: 2px solid #262626;
+   color: #FFF;
+   font-weight: 600;
+   left:0px;
+    }
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 1900px;
+  max-height: 1040px;
+  margin-left: 13px;
+  margin-top: -400px;
+  border: 0px solid #FFF;
+  background: #eee;
+  z-index: 1002;
+  overflow: visible;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 0px solid #AEAEAE;
+  border-radius: 3px;
+  background: #222222;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: right;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.7;
+}
+
+.boxclose:before {
+  content: "x";
+}
+
+#fade:hover ~ #boxclose {
+  display:none;
+}
+
+ </style>
+
+</head><body>
+<header  style="color: #FDEE50; top:-10px">
+<font color="yellow"><h1  >  &nbsp&nbsp&nbsp&nbsp&nbsp              DESSERTS</h1></font><p align="right" style="color:grey ;text-shadow: 2px 1px black; padding-left: 400px" align="center"><font size="3"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            ❝𝒫𝓊𝓁𝓁 𝓊𝓅 𝒶 𝒸𝒽𝒶𝒾𝓇.&nbsp 𝒯𝒶𝓀𝑒 𝒶 𝓉𝒶𝓈𝓉𝑒. 𝒞𝑜𝓂𝑒 𝒿𝑜𝒾𝓃 𝓊𝓈.&nbsp 𝐿𝒾𝒻𝑒 𝒾𝓈 𝓈𝑜 𝑒𝓃𝒹𝓁𝑒𝓈𝓈𝑒𝓁𝓎 𝒹𝑒𝓁𝒾𝒸𝒾𝑜𝓊𝓈.❞</header><br><br><br>
+
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      
+<!-- Cupcake -->
+      <div class="swiper-slide"><div class="container">
+  <img src="cupcake.jpg" alt="Snow" style="width:100%;filter: brightness(70%)">
+  <div class="bottom-left"><div class="text"><font color="white"><p style="color:#4E1D07; background-color: white; opacity: 0.6"> Bake these easy vanilla cupcakes in just 35 minutes. Perfect for birthdays, picnics or whenever you fancy a sweet treat, they're sure to be a crowd-pleaser</p>
+
+    <div id="light">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+  
+      <iframe width="750" height="435" src="https://www.youtube.com/embed/demCt-E4-NM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!--Browser does not support <video> tag -->
+    
+</div>
+
+<div id="fade" onClick="lightbox_close()"></div>
+
+<div>
+  <a href="#" onClick="lightbox_open()">Recipe video</a>
+</div>
+</div></div>
+  <div class="top-left"><div class="title"><h1>CupCake</h1>
+ </div></div></font>
+</div></div>
+
+<!-- Icecream -->
+<div class="swiper-slide"><div class="container">
+  <img src="icecream.jpg" alt="Snow" style="width:100%;filter: brightness(70%)">
+  <div class="bottom-left"><div class="text"><font color="white"><p style="color:#4E1D07; background-color: white; opacity: 0.6"> Blueberry Ice Cream is ice cream that can either be made by frozen or fresh blueberries. So here is the detail step by step information. </p><p style="left:-100px"><a href="https://www.youtube.com/embed/s5dPTsqgnxY" style="color: white">Recipe video</a></p></div></div>
+  <div class="top-left"><div class="title"><h1 style="color: white">IceCream</h1>
+ </div></div></font>
+</div></div>
+
+<!-- Pudding -->
+      <div class="swiper-slide"><div class="container">
+  <img src="pudding.jpg" alt="Snow" style="width:100%;filter: brightness(70%)">
+  <div class="bottom-left"><div class="text"><font color="white"><p style="color:#4E1D07; background-color: white; opacity: 0.6">  Pineapple Pudding is just the wonderful finishing touch that you need. So,try out this and enjoy with your loved ones.</p><p style="left:-100px"><a href="https://www.youtube.com/watch?v=QllReMhtNxs" style="color: black">Recipe video</a></p></div></div>
+  <div class="top-left"><div class="title"><h1 style="color: white">Pudding</h1>
+ </div></div></font>
+</div></div>
+      
+      
+      
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      slidesPerView: 'auto',
+      spaceBetween: 2,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets:'true',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+<script >
+  
+window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+  lightBoxVideo.close(0);
+}
+
+</script>
+
+</body>
+
+</html>

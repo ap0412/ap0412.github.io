@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>foody</title>
+<style >
+	.image{
+		
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
+		background-repeat: no-repeat;
+	}
+	.center{
+		position: absolute;
+		top:60%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+    
+
+	}
+	.top-left {
+  position: absolute;
+  top: 14px;
+  left: 21px;
+}
+.top-left a{
+color: #FFF;
+font-size: 14px;
+margin: 10px 0 0;
+   padding: 10px 10px;
+   font-weight: 600;
+   text-decoration: none;
+    border: 0px ;
+
+}
+.top-left h1{
+	font-size: 35px;
+	color: white;
+}
+.top-right
+{
+	position: absolute;
+	max-width: 200px;
+	top: 14px;
+    right:10px;
+  font-size: 14px;
+  line-height: 1.6;
+
+}
+.top-right h1{
+	font-size: 28px;
+	color: white;
+}
+
+	.subtitle {
+      font-size: 19px;
+      color: white;
+    }
+a {
+ display: inline-block;
+   margin: 10px 0 0;
+   padding: 10px 10px;
+   text-decoration: none;
+   border: 2px solid #fff;
+   color: #FFF;
+   font-weight: 600;
+   position: center;
+   font-size: 21px;
+}
+
+
+
+.ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+
+</style>
+
+</head>
+<body bgcolor="black" style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+	<div class="image">
+		<img src="rest.jpg" width="100%" style="filter: brightness(60%);">
+</div>
+
+<div class="center"><div class="subtitle"><h1 class="ml1">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters">Enjoy delicious food recipes at ᖴOOᗪY <br></span>
+    <span class="line line2"></span>
+  </span>
+</h1><a href="Frontpage.html">Explore</a></div></div>
+<div class="top-left"><a href="www.Instagram.com">Instagram</a><a href="www.facebook.com">Facebook</a><a href="www.twitter.com">Twitter</a><br>
+                  <h1>&nbsp ᖴOOᗪY<sup><font size="2">ⓒ</sup></font> </h1></div>
+<div class="top-right"><h1>About ᖴOOᗪY</h1><p><font color="white"> ᖴOOᗪY is a recipe book for everyone who loves food. Here you can discover different kinds of food and traditions. You can share your views as well as your recipes with us. We will give you total privacy and copyright to your dishes. </font></p></div> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
+
+
+<!-- This is a package for this animation -->
+<script type="text/javascript">
+	var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+  }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: '-=875',
+    delay: (el, i, l) => 80 * (l - i)
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 2000
+  });
+
+</script>
+<script type="text/javascript">alert('For better experience make sure your internet is on');
+</script>
+</body>
+</html>
